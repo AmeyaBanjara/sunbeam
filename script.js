@@ -4,46 +4,68 @@ let afternoon = "";
 let evening = "";
 
 
-// Show the follow-up options for an activity
+// Show the follow-up options
 function showOptions(optionId) {
 
-    // Find all of the follow-up option boxes
     let allOptions = document.querySelectorAll(".hidden-options");
 
-    // Hide them
     for (let i = 0; i < allOptions.length; i++) {
         allOptions[i].style.display = "none";
     }
 
-    // Show the one the user just clicked
     document.getElementById(optionId).style.display = "block";
 }
 
 
-// Save the morning choice
-function chooseMorning(choice) {
+// Highlight whichever button was clicked
+function selectButton(button) {
+
+    // Find the box containing this button
+    let optionBox = button.parentElement;
+
+    // Find all buttons inside that box
+    let buttons = optionBox.querySelectorAll("button");
+
+    // Remove the selected look from all of them
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("selected");
+    }
+
+    // Highlight the button that was clicked
+    button.classList.add("selected");
+}
+
+
+// Save morning choice
+function chooseMorning(choice, button) {
 
     morning = choice;
+
+    selectButton(button);
 
     document.getElementById("morning-result").innerText =
         "Morning: " + morning;
 }
 
 
-// Save the afternoon choice
-function chooseAfternoon(choice) {
+// Save afternoon choice
+function chooseAfternoon(choice, button) {
 
     afternoon = choice;
+
+    selectButton(button);
 
     document.getElementById("afternoon-result").innerText =
         "Afternoon: " + afternoon;
 }
 
 
-// Save the evening choice
-function chooseEvening(choice) {
+// Save evening choice
+function chooseEvening(choice, button) {
 
     evening = choice;
+
+    selectButton(button);
 
     document.getElementById("evening-result").innerText =
         "Evening: " + evening;
