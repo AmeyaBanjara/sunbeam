@@ -6,26 +6,16 @@
 </head>
 
 <body>
-
     <h1>Build Your Perfect Day ☀️</h1>
 
-    <p>What would you like to start your day with?</p>
+    <p>Choose an activity:</p>
 
-    <button onclick="showBeachOptions()">Beach 🏖️</button>
+    <button onclick="chooseActivity('Beach')">Beach 🏖️</button>
     <button onclick="chooseActivity('Brunch')">Brunch 🥞</button>
     <button onclick="chooseActivity('Shopping')">Shopping 🛍️</button>
-
-    <div id="beach-options" style="display: none;">
-        <p>Who are you going to the beach with?</p>
-
-        <button onclick="chooseBeach('Friends')">Friends 👯</button>
-        <button onclick="chooseBeach('Alone')">Alone 🌊</button>
-        <button onclick="chooseBeach('Family')">Family ❤️</button>
-    </div>
 
     <p id="result">Your choice will show here.</p>
 
     <script src="script.js"></script>
-
 </body>
 </html>
