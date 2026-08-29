@@ -1,1 +1,106 @@
-print("hello")
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start My Day</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="morning-screen">
+        <h1>Your Perfect Day Begins ☀️</h1>
+
+        <h2>10:00 AM</h2>
+
+        <h3 id="morning-plan"></h3>
+
+        <p>Your perfect day is officially underway...</p>
+
+        <button onclick="showAfternoon()">
+            Continue →
+        </button>
+    </div>
+
+
+    <div id="afternoon-screen" style="display: none;">
+        <h1>Afternoon 🌤️</h1>
+
+        <h2>2:00 PM</h2>
+
+        <h3 id="afternoon-plan"></h3>
+
+        <p>So far, everything is going perfectly...</p>
+
+        <button onclick="showPlotTwist()">
+            Continue →
+        </button>
+    </div>
+
+
+    <div id="plot-twist-screen" style="display: none;">
+        <h1>⚡ Plot Twist</h1>
+
+        <p id="plot-twist-text"></p>
+
+        <h3>What do you do?</h3>
+
+        <button onclick="chooseTwistResponse('Make the best of it ✨')">
+            Make the best of it ✨
+        </button>
+
+        <button onclick="chooseTwistResponse('Change the plan 🔄')">
+            Change the plan 🔄
+        </button>
+    </div>
+
+
+    <div id="evening-screen" style="display: none;">
+        <h1>Evening 🌙</h1>
+
+        <h2>7:00 PM</h2>
+
+        <h3 id="evening-plan"></h3>
+
+        <p>Your day is coming to an end...</p>
+
+        <button onclick="showReceipt()">
+            Finish My Day →
+        </button>
+    </div>
+
+
+    <div id="receipt-screen" style="display: none;">
+        <div class="receipt">
+
+            <h2>PERFECT DAY RECEIPT 🧾</h2>
+
+            <p id="receipt-morning"></p>
+            <p id="receipt-afternoon"></p>
+            <p id="receipt-evening"></p>
+
+            <hr>
+
+            <p id="receipt-twist"></p>
+            <p id="receipt-response"></p>
+
+            <hr>
+
+            <h3>TOTAL: PRICELESS</h3>
+
+            <p>Your day didn't go perfectly.</p>
+            <p><strong>Maybe that's what made it perfect.</strong></p>
+
+        </div>
+    </div>
+
+
+    <script src="startmyday.js"></script>
+
+</body>
+
+</html>

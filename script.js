@@ -85,3 +85,10 @@ function chooseEvening(choice, button) {
 
     checkIfReady();
 }
+function startMyDay() {
+    localStorage.setItem("morning", morning);
+    localStorage.setItem("afternoon", afternoon);
+    localStorage.setItem("evening", evening);
+
+    window.location.href = "startmyday.html";
+}

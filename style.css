@@ -75,3 +75,31 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+#morning-screen,
+#afternoon-screen,
+#plot-twist-screen,
+#evening-screen,
+#receipt-screen {
+    max-width: 650px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.receipt {
+    max-width: 350px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fffdf5;
+    font-family: monospace;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.receipt h2,
+.receipt h3 {
+    text-align: center;
+}
