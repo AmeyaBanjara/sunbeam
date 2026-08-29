@@ -22,7 +22,7 @@ function showAfternoon() {
 }
 
 
-// Show plot twist
+// Show a random plot twist
 function showPlotTwist() {
 
     document.getElementById("afternoon-screen").style.display = "none";
@@ -31,7 +31,8 @@ function showPlotTwist() {
     let twists = [];
 
 
-    // BEACH
+    // ================= BEACH =================
+
     if (afternoon.includes("Beach")) {
 
         twists = [
@@ -65,7 +66,8 @@ function showPlotTwist() {
     }
 
 
-    // SHOPPING
+    // ================= SHOPPING =================
+
     else if (afternoon.includes("Shopping")) {
 
         twists = [
@@ -92,21 +94,22 @@ function showPlotTwist() {
                 choices: [
                     "Window shop instead 👀",
                     "Go back for it 🚗",
-                    "Get creative with a free activity 🌳"
+                    "Find something free to do 🌳"
                 ]
             }
         ];
     }
 
 
-    // PICNIC
+    // ================= PICNIC =================
+
     else if (afternoon.includes("Picnic")) {
 
         twists = [
             {
                 text: "Someone forgot all of the picnic food 🧺",
                 choices: [
-                    "Order food to the park 🍕",
+                    "Order pizza to the park 🍕",
                     "Make a snack run 🥨",
                     "Laugh about it and stay anyway 😂"
                 ]
@@ -126,14 +129,15 @@ function showPlotTwist() {
                 choices: [
                     "Move to another spot 🌳",
                     "Protect the snacks at all costs 🫡",
-                    "Give up and get dessert 🍦"
+                    "Give up and get ice cream 🍦"
                 ]
             }
         ];
     }
 
 
-    // AMUSEMENT PARK
+    // ================= AMUSEMENT PARK =================
+
     else if (afternoon.includes("Amusement Park")) {
 
         twists = [
@@ -167,7 +171,7 @@ function showPlotTwist() {
     }
 
 
-    // Pick one random twist
+    // Pick one random plot twist
     let randomNumber = Math.floor(Math.random() * twists.length);
 
     let chosenTwist = twists[randomNumber];
@@ -175,18 +179,19 @@ function showPlotTwist() {
     plotTwist = chosenTwist.text;
 
 
-    // Put the twist on the screen
+    // Show plot twist text
     document.getElementById("plot-twist-text").innerText =
         plotTwist;
 
 
-    // Get the button area
+    // Find the area where the response buttons go
     let buttonArea = document.getElementById("twist-buttons");
 
+    // Clear old buttons
     buttonArea.innerHTML = "";
 
 
-    // Create one button for each response
+    // Create the 3 response buttons
     for (let i = 0; i < chosenTwist.choices.length; i++) {
 
         let button = document.createElement("button");
@@ -196,7 +201,9 @@ function showPlotTwist() {
         button.innerText = chosenTwist.choices[i];
 
         button.onclick = function() {
+
             chooseTwistResponse(chosenTwist.choices[i]);
+
         };
 
         buttonArea.appendChild(button);
@@ -207,7 +214,7 @@ function showPlotTwist() {
 }
 
 
-// User chooses what to do
+// Save what the user decides to do
 function chooseTwistResponse(choice) {
 
     twistResponse = choice;
@@ -221,7 +228,7 @@ function chooseTwistResponse(choice) {
 }
 
 
-// Show receipt
+// Show final receipt
 function showReceipt() {
 
     document.getElementById("evening-screen").style.display = "none";
