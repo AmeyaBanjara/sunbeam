@@ -20,19 +20,28 @@ function showOptions(optionId) {
 // Highlight whichever button was clicked
 function selectButton(button) {
 
-    // Find the box containing this button
     let optionBox = button.parentElement;
 
-    // Find all buttons inside that box
     let buttons = optionBox.querySelectorAll("button");
 
-    // Remove the selected look from all of them
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove("selected");
     }
 
-    // Highlight the button that was clicked
     button.classList.add("selected");
+}
+
+
+// Check if Morning, Afternoon, and Evening are all chosen
+function checkIfReady() {
+
+    if (
+        morning !== "" &&
+        afternoon !== "" &&
+        evening !== ""
+    ) {
+        document.getElementById("start-day-button").style.display = "inline-block";
+    }
 }
 
 
@@ -45,6 +54,8 @@ function chooseMorning(choice, button) {
 
     document.getElementById("morning-result").innerText =
         "Morning: " + morning;
+
+    checkIfReady();
 }
 
 
@@ -57,6 +68,8 @@ function chooseAfternoon(choice, button) {
 
     document.getElementById("afternoon-result").innerText =
         "Afternoon: " + afternoon;
+
+    checkIfReady();
 }
 
 
@@ -69,4 +82,6 @@ function chooseEvening(choice, button) {
 
     document.getElementById("evening-result").innerText =
         "Evening: " + evening;
+
+    checkIfReady();
 }
