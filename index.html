@@ -1,21 +1,271 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Perfect Day</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <h1>Build Your Perfect Day ☀️</h1>
+    <p>Choose how you want to spend your perfect day.</p>
 
-    <p>How would you like to start your day?:</p>
 
-    <button onclick="chooseActivity('Beach')">Beach 🏖️</button>
-    <button onclick="chooseActivity('Brunch')">Brunch 🥞</button>
-    <button onclick="chooseActivity('Shopping')">Shopping 🛍️</button>
+    <!-- MORNING -->
+    <h2>Morning ☀️</h2>
 
-    <p id="result">Your choice will show here.</p>
+    <button onclick="showOptions('brunch-options')">
+        Brunch 🥞
+    </button>
 
+    <button onclick="showOptions('hike-options')">
+        Hike 🥾
+    </button>
+
+    <button onclick="showOptions('sleep-options')">
+        Sleep In 😴
+    </button>
+
+
+    <!-- Brunch choices -->
+    <div id="brunch-options" class="hidden-options">
+
+        <p>Who are you getting brunch with?</p>
+
+        <button onclick="chooseMorning('Brunch with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseMorning('Brunch with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseMorning('Brunch Alone')">
+            Just Me ✨
+        </button>
+
+    </div>
+
+
+    <!-- Hike choices -->
+    <div id="hike-options" class="hidden-options">
+
+        <p>Who are you hiking with?</p>
+
+        <button onclick="chooseMorning('Hike with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseMorning('Hike with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseMorning('Solo Hike')">
+            Just Me 🌲
+        </button>
+
+    </div>
+
+
+    <!-- Sleep In choices -->
+    <div id="sleep-options" class="hidden-options">
+
+        <p>What's your perfect slow morning?</p>
+
+        <button onclick="chooseMorning('Sleep In and Watch TV')">
+            Watch TV 📺
+        </button>
+
+        <button onclick="chooseMorning('Sleep In and Read')">
+            Read 📖
+        </button>
+
+        <button onclick="chooseMorning('Sleep In and Have Breakfast')">
+            Breakfast 🥐
+        </button>
+
+    </div>
+
+
+
+    <!-- AFTERNOON -->
+    <h2>Afternoon 🌤️</h2>
+
+    <button onclick="showOptions('beach-options')">
+        Beach 🏖️
+    </button>
+
+    <button onclick="showOptions('shopping-options')">
+        Shopping 🛍️
+    </button>
+
+    <button onclick="showOptions('picnic-options')">
+        Picnic 🧺
+    </button>
+
+
+    <!-- Beach choices -->
+    <div id="beach-options" class="hidden-options">
+
+        <p>Who are you going to the beach with?</p>
+
+        <button onclick="chooseAfternoon('Beach with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseAfternoon('Beach with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseAfternoon('Beach Alone')">
+            Just Me 🌊
+        </button>
+
+    </div>
+
+
+    <!-- Shopping choices -->
+    <div id="shopping-options" class="hidden-options">
+
+        <p>Who are you going shopping with?</p>
+
+        <button onclick="chooseAfternoon('Shopping with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseAfternoon('Shopping with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseAfternoon('Shopping Alone')">
+            Just Me 🛍️
+        </button>
+
+    </div>
+
+
+    <!-- Picnic choices -->
+    <div id="picnic-options" class="hidden-options">
+
+        <p>Who are you having a picnic with?</p>
+
+        <button onclick="chooseAfternoon('Picnic with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseAfternoon('Picnic with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseAfternoon('Picnic Alone')">
+            Just Me 🌷
+        </button>
+
+    </div>
+
+
+
+    <!-- EVENING -->
+    <h2>Evening 🌙</h2>
+
+    <button onclick="showOptions('movie-options')">
+        Movie 🎬
+    </button>
+
+    <button onclick="showOptions('dinner-options')">
+        Dinner 🍝
+    </button>
+
+    <button onclick="showOptions('sunset-options')">
+        Sunset 🌅
+    </button>
+
+
+    <!-- Movie choices -->
+    <div id="movie-options" class="hidden-options">
+
+        <p>Who are you watching a movie with?</p>
+
+        <button onclick="chooseEvening('Movie with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseEvening('Movie with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseEvening('Movie Alone')">
+            Just Me 🍿
+        </button>
+
+    </div>
+
+
+    <!-- Dinner choices -->
+    <div id="dinner-options" class="hidden-options">
+
+        <p>Who are you having dinner with?</p>
+
+        <button onclick="chooseEvening('Dinner with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseEvening('Dinner with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseEvening('Dinner Alone')">
+            Just Me 🍝
+        </button>
+
+    </div>
+
+
+    <!-- Sunset choices -->
+    <div id="sunset-options" class="hidden-options">
+
+        <p>Who are you watching the sunset with?</p>
+
+        <button onclick="chooseEvening('Sunset with Friends')">
+            Friends 👯
+        </button>
+
+        <button onclick="chooseEvening('Sunset with Family')">
+            Family ❤️
+        </button>
+
+        <button onclick="chooseEvening('Sunset Alone')">
+            Just Me 🌅
+        </button>
+
+    </div>
+
+
+
+    <!-- USER'S CURRENT DAY -->
+    <div class="day-summary">
+
+        <h2>Your Perfect Day ✨</h2>
+
+        <p id="morning-result">
+            Morning: nothing chosen
+        </p>
+
+        <p id="afternoon-result">
+            Afternoon: nothing chosen
+        </p>
+
+        <p id="evening-result">
+            Evening: nothing chosen
+        </p>
+
+    </div>
+
+
+    <!-- Connect JavaScript -->
     <script src="script.js"></script>
+
 </body>
+
 </html>

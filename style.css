@@ -1,16 +1,70 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
+
+    background-color: #fff8e7;
+
+    margin: 0;
+    padding: 40px;
 }
+
 
 h1 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
+
+h2 {
+    margin-top: 40px;
+}
+
+
 button {
-    padding: 15px 20px;
-    margin: 10px;
-    font-size: 18px;
+    font-size: 16px;
+
+    padding: 14px 20px;
+    margin: 8px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: white;
+
     cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* These boxes start off hidden */
+.hidden-options {
+    display: none;
+
+    max-width: 500px;
+
+    margin: 20px auto;
+    padding: 20px;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+}
+
+
+.day-summary {
+    max-width: 500px;
+
+    margin: 50px auto 0;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
