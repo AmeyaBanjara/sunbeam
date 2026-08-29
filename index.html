@@ -12,12 +12,10 @@
 
 <body>
 
-    <h1>Build Your Perfect Day</h1>
+    <h1>Build Your Perfect Day ☀️</h1>
     <p>Choose how you want to spend your perfect day.</p>
 
-
-    <!-- ==================== MORNING ==================== -->
-
+    <!-- MORNING -->
     <h2>Morning ☀️</h2>
 
     <button type="button" onclick="showOptions('brunch-options')">
@@ -32,11 +30,12 @@
         Sleep In 😴
     </button>
 
+    <button type="button" onclick="showOptions('coffee-options')">
+        Coffee Shop ☕
+    </button>
 
-    <!-- Brunch Options -->
 
     <div id="brunch-options" class="hidden-options">
-
         <p>Who are you getting brunch with?</p>
 
         <button type="button"
@@ -53,14 +52,10 @@
                 onclick="chooseMorning('Brunch Alone', this)">
             Just Me ✨
         </button>
-
     </div>
 
 
-    <!-- Hike Options -->
-
     <div id="hike-options" class="hidden-options">
-
         <p>Who are you hiking with?</p>
 
         <button type="button"
@@ -77,14 +72,10 @@
                 onclick="chooseMorning('Solo Hike', this)">
             Just Me 🌲
         </button>
-
     </div>
 
 
-    <!-- Sleep In Options -->
-
     <div id="sleep-options" class="hidden-options">
-
         <p>What's your perfect slow morning?</p>
 
         <button type="button"
@@ -101,13 +92,30 @@
                 onclick="chooseMorning('Sleep In and Have Breakfast', this)">
             Breakfast 🥐
         </button>
-
     </div>
 
 
+    <div id="coffee-options" class="hidden-options">
+        <p>Who are you going to the coffee shop with?</p>
 
-    <!-- ==================== AFTERNOON ==================== -->
+        <button type="button"
+                onclick="chooseMorning('Coffee Shop with Friends', this)">
+            Friends 👯
+        </button>
 
+        <button type="button"
+                onclick="chooseMorning('Coffee Shop with Family', this)">
+            Family ❤️
+        </button>
+
+        <button type="button"
+                onclick="chooseMorning('Coffee Shop Alone', this)">
+            Just Me ☕
+        </button>
+    </div>
+
+
+    <!-- AFTERNOON -->
     <h2>Afternoon 🌤️</h2>
 
     <button type="button" onclick="showOptions('beach-options')">
@@ -122,11 +130,12 @@
         Picnic 🧺
     </button>
 
+    <button type="button" onclick="showOptions('amusement-options')">
+        Amusement Park 🎢
+    </button>
 
-    <!-- Beach Options -->
 
     <div id="beach-options" class="hidden-options">
-
         <p>Who are you going to the beach with?</p>
 
         <button type="button"
@@ -143,14 +152,10 @@
                 onclick="chooseAfternoon('Beach Alone', this)">
             Just Me 🌊
         </button>
-
     </div>
 
 
-    <!-- Shopping Options -->
-
     <div id="shopping-options" class="hidden-options">
-
         <p>Who are you going shopping with?</p>
 
         <button type="button"
@@ -167,14 +172,10 @@
                 onclick="chooseAfternoon('Shopping Alone', this)">
             Just Me 🛍️
         </button>
-
     </div>
 
 
-    <!-- Picnic Options -->
-
     <div id="picnic-options" class="hidden-options">
-
         <p>Who are you having a picnic with?</p>
 
         <button type="button"
@@ -191,13 +192,30 @@
                 onclick="chooseAfternoon('Picnic Alone', this)">
             Just Me 🌷
         </button>
-
     </div>
 
 
+    <div id="amusement-options" class="hidden-options">
+        <p>Who are you going to the amusement park with?</p>
 
-    <!-- ==================== EVENING ==================== -->
+        <button type="button"
+                onclick="chooseAfternoon('Amusement Park with Friends', this)">
+            Friends 👯
+        </button>
 
+        <button type="button"
+                onclick="chooseAfternoon('Amusement Park with Family', this)">
+            Family ❤️
+        </button>
+
+        <button type="button"
+                onclick="chooseAfternoon('Amusement Park Alone', this)">
+            Just Me 🎢
+        </button>
+    </div>
+
+
+    <!-- EVENING -->
     <h2>Evening 🌙</h2>
 
     <button type="button" onclick="showOptions('movie-options')">
@@ -212,11 +230,12 @@
         Sunset 🌅
     </button>
 
+    <button type="button" onclick="showOptions('concert-options')">
+        Concert 🎤
+    </button>
 
-    <!-- Movie Options -->
 
     <div id="movie-options" class="hidden-options">
-
         <p>Who are you watching a movie with?</p>
 
         <button type="button"
@@ -233,14 +252,10 @@
                 onclick="chooseEvening('Movie Alone', this)">
             Just Me 🍿
         </button>
-
     </div>
 
 
-    <!-- Dinner Options -->
-
     <div id="dinner-options" class="hidden-options">
-
         <p>Who are you having dinner with?</p>
 
         <button type="button"
@@ -257,14 +272,10 @@
                 onclick="chooseEvening('Dinner Alone', this)">
             Just Me 🍝
         </button>
-
     </div>
 
 
-    <!-- Sunset Options -->
-
     <div id="sunset-options" class="hidden-options">
-
         <p>Who are you watching the sunset with?</p>
 
         <button type="button"
@@ -281,13 +292,30 @@
                 onclick="chooseEvening('Sunset Alone', this)">
             Just Me 🌅
         </button>
-
     </div>
 
 
+    <div id="concert-options" class="hidden-options">
+        <p>Who are you going to the concert with?</p>
 
-    <!-- ==================== SUMMARY ==================== -->
+        <button type="button"
+                onclick="chooseEvening('Concert with Friends', this)">
+            Friends 👯
+        </button>
 
+        <button type="button"
+                onclick="chooseEvening('Concert with Family', this)">
+            Family ❤️
+        </button>
+
+        <button type="button"
+                onclick="chooseEvening('Concert Alone', this)">
+            Just Me 🎤
+        </button>
+    </div>
+
+
+    <!-- SUMMARY -->
     <div class="day-summary">
 
         <h2>Your Perfect Day ✨</h2>
@@ -304,21 +332,16 @@
             Evening: nothing chosen
         </p>
 
-
-        <!-- Hidden until all 3 choices are made -->
-
         <button
-    id="start-day-button"
-    type="button"
-    style="display: none;"
-    onclick="startMyDay()">
-    Start My Day →
-</button>
+            id="start-day-button"
+            type="button"
+            style="display: none;"
+            onclick="startMyDay()">
+            Start My Day →
+        </button>
 
     </div>
 
-
-    <!-- Connect JavaScript -->
 
     <script src="script.js"></script>
 

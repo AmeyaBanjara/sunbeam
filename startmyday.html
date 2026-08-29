@@ -12,7 +12,9 @@
 
 <body>
 
+    <!-- MORNING SCREEN -->
     <div id="morning-screen">
+
         <h1>Your Perfect Day Begins ☀️</h1>
 
         <h2>10:00 AM</h2>
@@ -21,13 +23,16 @@
 
         <p>Your perfect day is officially underway...</p>
 
-        <button onclick="showAfternoon()">
+        <button type="button" onclick="showAfternoon()">
             Continue →
         </button>
+
     </div>
 
 
+    <!-- AFTERNOON SCREEN -->
     <div id="afternoon-screen" style="display: none;">
+
         <h1>Afternoon 🌤️</h1>
 
         <h2>2:00 PM</h2>
@@ -36,30 +41,38 @@
 
         <p>So far, everything is going perfectly...</p>
 
-        <button onclick="showPlotTwist()">
+        <button type="button" onclick="showPlotTwist()">
             Continue →
         </button>
+
     </div>
 
 
+    <!-- PLOT TWIST SCREEN -->
     <div id="plot-twist-screen" style="display: none;">
+
         <h1>⚡ Plot Twist</h1>
 
         <p id="plot-twist-text"></p>
 
         <h3>What do you do?</h3>
 
-        <button onclick="chooseTwistResponse('Make the best of it ✨')">
+        <button type="button"
+                onclick="chooseTwistResponse('Make the best of it ✨')">
             Make the best of it ✨
         </button>
 
-        <button onclick="chooseTwistResponse('Change the plan 🔄')">
+        <button type="button"
+                onclick="chooseTwistResponse('Change the plan 🔄')">
             Change the plan 🔄
         </button>
+
     </div>
 
 
+    <!-- EVENING SCREEN -->
     <div id="evening-screen" style="display: none;">
+
         <h1>Evening 🌙</h1>
 
         <h2>7:00 PM</h2>
@@ -68,13 +81,16 @@
 
         <p>Your day is coming to an end...</p>
 
-        <button onclick="showReceipt()">
+        <button type="button" onclick="showReceipt()">
             Finish My Day →
         </button>
+
     </div>
 
 
+    <!-- RECEIPT SCREEN -->
     <div id="receipt-screen" style="display: none;">
+
         <div class="receipt">
 
             <h2>PERFECT DAY RECEIPT 🧾</h2>
@@ -92,16 +108,23 @@
 
             <h3>TOTAL: PRICELESS</h3>
 
-            <p>Your day didn't go perfectly but</p>
-            <p><strong>Maybe that's what made it perfect.</strong></p>
+            <p>Your day didn't go perfectly.</p>
+
+            <p>
+                <strong>
+                    Maybe that's what made it perfect.
+                </strong>
+            </p>
 
             <br>
 
-<button type="button" onclick="window.location.href='index.html'">
-    Build Another Day ↻
-</button>
+            <button type="button"
+                    onclick="window.location.href='index.html'">
+                Build Another Day ↻
+            </button>
 
         </div>
+
     </div>
 
 

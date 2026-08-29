@@ -1,4 +1,3 @@
-// These variables remember the user's choices
 let morning = "";
 let afternoon = "";
 let evening = "";
@@ -17,7 +16,7 @@ function showOptions(optionId) {
 }
 
 
-// Highlight whichever button was clicked
+// Highlight whichever smaller option was clicked
 function selectButton(button) {
 
     let optionBox = button.parentElement;
@@ -32,7 +31,7 @@ function selectButton(button) {
 }
 
 
-// Check if Morning, Afternoon, and Evening are all chosen
+// Check whether all 3 parts of the day have been selected
 function checkIfReady() {
 
     if (
@@ -40,7 +39,8 @@ function checkIfReady() {
         afternoon !== "" &&
         evening !== ""
     ) {
-        document.getElementById("start-day-button").style.display = "inline-block";
+        document.getElementById("start-day-button").style.display =
+            "inline-block";
     }
 }
 
@@ -85,7 +85,11 @@ function chooseEvening(choice, button) {
 
     checkIfReady();
 }
+
+
+// Save choices and go to the experience page
 function startMyDay() {
+
     localStorage.setItem("morning", morning);
     localStorage.setItem("afternoon", afternoon);
     localStorage.setItem("evening", evening);

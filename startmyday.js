@@ -10,10 +10,11 @@ let twistResponse = "";
 document.getElementById("morning-plan").innerText = morning;
 
 
-// Move to afternoon
+// Go to afternoon
 function showAfternoon() {
 
     document.getElementById("morning-screen").style.display = "none";
+
     document.getElementById("afternoon-screen").style.display = "block";
 
     document.getElementById("afternoon-plan").innerText = afternoon;
@@ -22,40 +23,94 @@ function showAfternoon() {
 }
 
 
-// Show a plot twist based on the afternoon activity
+// Choose a random plot twist based on the afternoon activity
 function showPlotTwist() {
 
     document.getElementById("afternoon-screen").style.display = "none";
+
     document.getElementById("plot-twist-screen").style.display = "block";
 
 
     if (afternoon.includes("Beach")) {
-        plotTwist = "It suddenly starts pouring rain right before the beach 🌧️";
+
+        let twists = [
+            "It suddenly starts pouring rain 🌧️",
+            "Traffic to the beach is terrible 🚗",
+            "The beach is unexpectedly closed 🏖️"
+        ];
+
+        let randomNumber =
+            Math.floor(Math.random() * twists.length);
+
+        plotTwist = twists[randomNumber];
     }
+
 
     else if (afternoon.includes("Shopping")) {
-        plotTwist = "The store you wanted to visit is unexpectedly closed 😭";
+
+        let twists = [
+            "The store you wanted to visit is closed 😭",
+            "The thing you wanted is completely sold out 🛍️",
+            "You realize you left your wallet at home 💳"
+        ];
+
+        let randomNumber =
+            Math.floor(Math.random() * twists.length);
+
+        plotTwist = twists[randomNumber];
     }
+
 
     else if (afternoon.includes("Picnic")) {
-        plotTwist = "Someone forgot all of the picnic food 🧺";
+
+        let twists = [
+            "Someone forgot all the picnic food 🧺",
+            "It suddenly starts raining 🌧️",
+            "A swarm of ants discovers your picnic 🐜"
+        ];
+
+        let randomNumber =
+            Math.floor(Math.random() * twists.length);
+
+        plotTwist = twists[randomNumber];
     }
 
-    document.getElementById("plot-twist-text").innerText = plotTwist;
+
+    else if (afternoon.includes("Amusement Park")) {
+
+        let twists = [
+            "Your favorite ride is closed 🎢",
+            "The line for the ride is two hours long 😭",
+            "It starts raining right when you arrive 🌧️"
+        ];
+
+        let randomNumber =
+            Math.floor(Math.random() * twists.length);
+
+        plotTwist = twists[randomNumber];
+    }
+
+
+    document.getElementById("plot-twist-text").innerText =
+        plotTwist;
 
     window.scrollTo(0, 0);
 }
 
 
-// Save what the user decides to do
+// Save the user's response to the plot twist
 function chooseTwistResponse(choice) {
 
     twistResponse = choice;
 
-    document.getElementById("plot-twist-screen").style.display = "none";
-    document.getElementById("evening-screen").style.display = "block";
+    document.getElementById("plot-twist-screen").style.display =
+        "none";
 
-    document.getElementById("evening-plan").innerText = evening;
+    document.getElementById("evening-screen").style.display =
+        "block";
+
+    document.getElementById("evening-plan").innerText =
+        evening;
 
     window.scrollTo(0, 0);
 }
@@ -64,8 +119,12 @@ function chooseTwistResponse(choice) {
 // Show the final receipt
 function showReceipt() {
 
-    document.getElementById("evening-screen").style.display = "none";
-    document.getElementById("receipt-screen").style.display = "block";
+    document.getElementById("evening-screen").style.display =
+        "none";
+
+    document.getElementById("receipt-screen").style.display =
+        "block";
+
 
     document.getElementById("receipt-morning").innerText =
         "Morning: " + morning;
@@ -75,6 +134,7 @@ function showReceipt() {
 
     document.getElementById("receipt-evening").innerText =
         "Evening: " + evening;
+
 
     document.getElementById("receipt-twist").innerText =
         "Plot Twist: " + plotTwist;
