@@ -251,6 +251,14 @@ function showReceipt() {
     document.getElementById("receipt-response").innerText =
         "You chose: " + twistResponse;
 
+let perfectScore = Math.floor(Math.random() * 11) + 89;
+let adaptability = Math.floor(Math.random() * 11) + 90;
 
+document.getElementById("perfect-score").innerText =
+    "Perfect Day Score: " + perfectScore + "% ✨";
+
+document.getElementById("adaptability-score").innerText =
+    "Adaptability: " + adaptability + "% 💫";
+    
     window.scrollTo(0, 0);
 }
