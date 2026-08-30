@@ -241,3 +241,123 @@ button:hover {
         transform: scale(0.8);
     }
 }
+
+/* =========================
+   EVENING NIGHT SKY
+========================= */
+
+.night-screen {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        to bottom,
+        #182848,
+        #273c75,
+        #3c6382
+    ) !important;
+
+    color: white;
+}
+
+.night-screen h1,
+.night-screen h2,
+.night-screen h3,
+.night-screen p,
+.night-screen button {
+    position: relative;
+    z-index: 2;
+}
+
+.night-sky {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.moon {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    font-size: 55px;
+
+    animation: moonFloat 4s ease-in-out infinite;
+}
+
+@keyframes moonFloat {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.shooting-star {
+    position: absolute;
+
+    font-size: 22px;
+
+    opacity: 0;
+
+    animation: shootStar 5s linear infinite;
+}
+
+.star-a {
+    top: 20%;
+    left: -40px;
+}
+
+.star-b {
+    top: 45%;
+    left: -60px;
+
+    animation-delay: 1.8s;
+}
+
+.star-c {
+    top: 70%;
+    left: -30px;
+
+    animation-delay: 3.2s;
+}
+
+@keyframes shootStar {
+
+    0% {
+        transform: translate(0, 0) rotate(20deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(800px, 200px) rotate(20deg);
+        opacity: 0;
+    }
+}
