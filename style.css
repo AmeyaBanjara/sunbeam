@@ -103,3 +103,141 @@ button:hover {
 .receipt h3 {
     text-align: center;
 }
+
+/* =========================
+   MOVING BACKGROUND
+========================= */
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* SUN */
+
+.sun {
+    position: absolute;
+
+    top: 7%;
+    right: 8%;
+
+    font-size: 70px;
+
+    opacity: 0.45;
+
+    animation: floatSun 5s ease-in-out infinite;
+}
+
+@keyframes floatSun {
+
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+/* CLOUDS */
+
+.cloud {
+    position: absolute;
+
+    font-size: 55px;
+
+    opacity: 0.25;
+}
+
+.cloud-one {
+    top: 20%;
+
+    animation: moveCloud 18s linear infinite;
+}
+
+.cloud-two {
+    top: 55%;
+
+    animation: moveCloud 25s linear infinite;
+}
+
+@keyframes moveCloud {
+
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 110%;
+    }
+}
+
+
+/* STARS */
+
+.star {
+    position: absolute;
+
+    opacity: 0.35;
+
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star-one {
+    top: 15%;
+    left: 15%;
+
+    font-size: 30px;
+}
+
+.star-two {
+    top: 65%;
+    right: 15%;
+
+    font-size: 25px;
+
+    animation-delay: 0.7s;
+}
+
+.star-three {
+    top: 80%;
+    left: 20%;
+
+    font-size: 22px;
+
+    animation-delay: 1.2s;
+}
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+}
